@@ -42,7 +42,7 @@ fun PageOne(navController: NavController) {
         )
         Button(onClick = {
             Toast.makeText(context, "跳转到第二个页面", Toast.LENGTH_LONG).show()
-            navController.navigate(RouteConfig.ROUTE_PAGETWO)
+            navController.navigate("${RouteConfig.ROUTE_PAGETWO}/刘德华")
         }, modifier = Modifier.fillMaxWidth()) {
             Text("点击跳转到第二个页面")
         }

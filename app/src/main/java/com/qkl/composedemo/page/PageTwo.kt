@@ -15,6 +15,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.qkl.composedemo.ui.theme.ComposeDemoTheme
 
 /**
@@ -25,7 +26,7 @@ import com.qkl.composedemo.ui.theme.ComposeDemoTheme
  * @date 2022/6/30
  */
 @Composable
-fun PageTwo(navController: NavController) {
+fun PageTwo(navController: NavController,name:String,age:Int) {
     val context = LocalContext.current
     Column(
         modifier = Modifier
@@ -33,7 +34,7 @@ fun PageTwo(navController: NavController) {
             .fillMaxHeight()
     ) {
         Text(
-            text = "这是第二个页面",
+            text = "他叫$name,今年$age 岁了",
             modifier = Modifier.fillMaxWidth(),
             color = Color.Blue,
             textAlign = TextAlign.Center,
@@ -52,6 +53,6 @@ fun PageTwo(navController: NavController) {
 @Composable
 fun DefaultPreview3() {
     ComposeDemoTheme {
-//        PageTwo()
+        PageTwo(rememberNavController(),"李白",18)
     }
 }
