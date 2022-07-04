@@ -26,6 +26,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.qkl.composedemo.bean.MessageBean
 import com.qkl.composedemo.nav.NavHostDemo
+import com.qkl.composedemo.page.LayoutInCompose
 import com.qkl.composedemo.ui.theme.ComposeDemoTheme
 
 class MainActivity : ComponentActivity() {
@@ -37,9 +38,14 @@ class MainActivity : ComponentActivity() {
                 Surface(color = MaterialTheme.colors.background) {
 //                    Greeting(MessageBean("title", "content"))
 //                    test1(MessageBean("title", "content"))
+                    //状态变更
 //                    test()
+                    //列表动画
 //                    LazyList()
-                    NavHostDemo()
+                    //页面切换，传递参数
+//                    NavHostDemo()
+                    //toolbar和bottomBar
+                    LayoutInCompose()
                 }
             }
         }
